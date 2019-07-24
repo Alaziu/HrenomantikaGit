@@ -1,0 +1,27 @@
+﻿<Window x:Class="Hrenomantika.Ui.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hrenomantika.Ui"
+        mc:Ignorable="d"
+        Title="Hrenomantika" Height="315.561" Width="524.199"
+        Closing="Window_Closing">
+    <Grid>
+        <TextBox Name="PathToRepo" HorizontalAlignment="Left" Height="17.851" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="358.811" Margin="79.49,10,0,0"/>
+        <TextBlock HorizontalAlignment="Left" Height="17.851" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="74.49"><Run Text="Путь к папке"/><LineBreak/><Run/></TextBlock>
+        <Button Click="SelectFolder" Content="Выбрать" Height="17.851" Margin="443.301,10,0,0" VerticalAlignment="Top" Width="73.699" HorizontalAlignment="Left"/>
+        <ListBox Name="ListCommit" HorizontalAlignment="Left" Height="208.238" Margin="0,37.073,0,0" VerticalAlignment="Top" Width="517">
+        </ListBox>
+        <Grid HorizontalAlignment="Left" Margin="0,245.311,0,0" VerticalAlignment="Top" Width="517">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Button Name="StartButton" Click="StartRepo" Grid.Column="0" Content="Старт" HorizontalAlignment="Stretch" Height="40.045" VerticalAlignment="Stretch"/>
+            <Button Grid.Column="1" Click="LoadCommit" Content="Загрузить сохранение" HorizontalAlignment="Stretch" Height="40.045" VerticalAlignment="Stretch"/>
+
+        </Grid>
+
+    </Grid>
+</Window>
